@@ -307,7 +307,7 @@ public abstract class EncoderDevice {
         // create a surface from the encoder
         Log.i(LOGTAG, "Starting encoder at " + width + "x" + height);
         try {
-            venc = MediaCodec.createEncoderByType("video/avc");
+            venc = MediaCodec.createByCodecName("OMX.google.h264.encoder");
         } catch (IOException e) {
             Log.wtf(LOGTAG, "Can't create AVC encoder!", e);
         }
